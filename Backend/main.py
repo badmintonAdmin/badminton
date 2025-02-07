@@ -9,6 +9,7 @@ from database import get_db, get_engine
 from createTables import setup_users
 from users import Users_add_shema
 from models import UsersModel
+from config import settings
 
 app = FastAPI()
 
@@ -82,4 +83,8 @@ async def create_users():
 
 
 if __name__ == "__main__":
-    uvicorn.run("main:app", reload=True)
+    uvicorn.run(
+        "main:app",
+        host=settings.run.host,
+        port=settings.run.port,
+        reload=True)
