@@ -1,6 +1,6 @@
 import uvicorn
 from fastapi import FastAPI, Depends, HTTPException
-from config import settings
+from core.config import settings
 from api import router as api_router
 
 app = FastAPI()

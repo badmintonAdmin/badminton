@@ -11,9 +11,13 @@ class RunConfig(BaseModel):
     prefix: str = "/api"
 
 
+class DataBaseConfig(BaseModel):
+    url: str = os.getenv("DATABASE_URL")
+
+
 class Settings(BaseSettings):
     run: RunConfig = RunConfig()
-    db_url: str = os.getenv("DATABASE_URL")
+    db: DataBaseConfig = DataBaseConfig()
 
 
 settings = Settings()
