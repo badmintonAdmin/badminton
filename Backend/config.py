@@ -8,6 +8,7 @@ load_dotenv()
 class RunConfig(BaseModel):
     host: str = "localhost"
     port: int = 8080
+    prefix: str = "/api"
 
 
 class Settings(BaseSettings):
