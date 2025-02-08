@@ -2,6 +2,7 @@ import os
 from dotenv import load_dotenv
 from pydantic import BaseModel
 from pydantic_settings import BaseSettings
+
 load_dotenv()
 
 
@@ -14,6 +15,7 @@ class RunConfig(BaseModel):
 class ApiV1Prefix(BaseModel):
     prefix: str = "/v1"
     users: str = "/users"
+    admin: str = "/admin"
 
 
 class ApiPrefix(BaseModel):
