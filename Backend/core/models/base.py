@@ -1,8 +1,8 @@
 from sqlalchemy import MetaData
 from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column
 from sqlalchemy.orm import declared_attr
-from utils import camel_case_to_snake_case
-from core.config import settings
+from Backend.utils import camel_case_to_snake_case
+from Backend.core.config import settings
 
 
 class Base(DeclarativeBase):
