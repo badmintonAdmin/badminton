@@ -15,3 +15,5 @@ logs/
 logfile
 
 .keep
+.idea
+.fastApi
